@@ -1,5 +1,5 @@
 CREATE TABLE IF NOT EXISTS PUBLIC.host_info (
-                                                id               SERIAL NOT NULL,
+                                                id               INT PRIMARY KEY,
                                                 hostname         VARCHAR NOT NULL,
     -- add more columns
     -- primary key constraint
