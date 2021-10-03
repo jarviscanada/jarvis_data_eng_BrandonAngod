@@ -1,3 +1,16 @@
+#Check # of args
+if [ $# -ne  5 ]
+then
+  echo "Missing Arguments"
+  exit 1
+fi
+
+psql_host=$1
+psql_port=$2
+db_name=$3
+psql_user=$4
+psql_password=$5
+
 export PGPASSWORD='password'
 #save hostname to a variable
 hostname=$(hostname -f)
@@ -19,7 +32,7 @@ echo $cpu_kernel
 echo disk_io
 echo disk_available
 
-psql -h localhost -U postgres -w << EOF
+psql -h $psql_host -p $psql_port -d $db_name -U $psql_user -w << EOF
 \dt
 \c host_agent
 \dt
