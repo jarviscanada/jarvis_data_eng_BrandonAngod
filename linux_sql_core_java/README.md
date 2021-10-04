@@ -1,9 +1,9 @@
-#Introduction
+# Introduction
 
 This project is designed to create a SQL table of the host's usage and info. It will take a snapshot every minute and save it to the table using crontab. To create this project I used Docker, PostgreSQL, Bash, Git, Intelij, and crontab. The idea of the project is so that the user can monitor their usage of their computer and track memory and cpu usage and be able to manipulate that data to see how much they use on average. With this the user can see if they need to upgrade their current setup or possibly just make sure everything is running smoothly. The program requires a little bit of setup to get running but runs smoothly with little to no errors.
 
 
-#Quick Start
+# Quick Start
 ```bash
 #Create The psql session
 ./scripts/psql_docker.sh create <username> <password>
@@ -22,7 +22,7 @@ crontab -e
 
 ```
 
-#Implementation
+# Implementation
 In order to implement this project first we need to create a psql container using docker. After the docker creates the psql instance
 we must start the instance up. Now that we have our instance ready next we must add our tables to the database.
 To do so the DDL.sql file has the commands required to make the appropriate sql table with all the categories required.
@@ -31,11 +31,12 @@ Using host_info.sh and host_usage.sh we can record the data and send it to the p
 In order to keep sending the data periodically we utilize crontab to automate the system to run the program every minute.
 Now we can just sit back and relax as every minute a new entry is made.
 
-#Architecture
+# Architecture
 As you can see in diagram bellow each linux host will send to the database. After it is sent to the database it will be sent to either host_info or host_usage depending on which table is being called.
 
 ![](assets/linuxsql.drawio(1).png)
-#Scripts
+
+# Scripts
 - psql_docker.sh 
   - Create | Start | End the psql session
 - host_info.sh 
@@ -51,7 +52,7 @@ As you can see in diagram bellow each linux host will send to the database. Afte
   - Checks for failures
   - Sorts sql table by hardware info
 
-#Database Modeling
+# Database Modeling
 The database consists of two tables, host_info and host_usage. The first one is made to hold any information on the hosts system setup. The second will hold all info regarding the hosts usage of the computer and will have many results.
 
 **host_info:**
@@ -74,10 +75,10 @@ The database consists of two tables, host_info and host_usage. The first one is 
 - ```disk_available``` how much disk space is available.
 
 
-#Test
+# Test
 To test my bash scripts and sql queries I simply gathered data within my tables and used that as testing data. For the averages I also used traditional methods of manually adding and dividing the values in order to make sure that the result produced is accurate.
 
-#Deployment
+# Deployment
 To deploy the app I used GitHub to store the files, crontab to automate the execution of the script and docker to contain the instance of psql. This way the program will not be too demanding and operate with ease.
 #Improvements
 -Improved user experience.
