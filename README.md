@@ -15,13 +15,13 @@ My name is Brandon Angod. I graduated from Ontario Tech University with a major 
 Project source code: [https://github.com/jarviscanada/jarvis_data_eng_BrandonAngod](https://github.com/jarviscanada/jarvis_data_eng_BrandonAngod)
 
 
-**Cluster Monitor** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_BrandonAngod/tree/master/linux_sql)]: Suspendisse a tincidunt odio. Suspendisse posuere luctus aliquet. Quisque magna tellus, tempor vitae arcu sed, volutpat scelerisque lacus. Aliquam varius pulvinar dapibus. Ut a tincidunt sem. Aenean sollicitudin fringilla erat ut imperdiet. Phasellus fermentum, enim vitae laoreet elementum, eros nisl hendrerit lorem.
+**Cluster Monitor** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_BrandonAngod/tree/master/linux_sql)]: Monitors activity on different clusters and records information to an sql table to allow the user to monitor usage over time and manipulate the data.
 
 **Core Java Apps** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_BrandonAngod/tree/master/core_java)]:
       
-  - Twitter App: Curabitur laoreet tristique leo, eget suscipit nisi. Sed in sodales ex. Maecenas vitae tincidunt dui, et eleifend quam.
-  - JDBC App: Curabitur laoreet tristique leo, eget suscipit nisi. Sed in sodales ex. Maecenas vitae tincidunt dui, et eleifend quam.
-  - Grep App: Curabitur laoreet tristique leo, eget suscipit nisi. Sed in sodales ex. Maecenas vitae tincidunt dui, et eleifend quam.
+  - Twitter App: WIP
+  - JDBC App: WIP
+  - Grep App: WIP
 
 **Springboot App** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_BrandonAngod/tree/master/springboot)]: Not Started
 
@@ -35,14 +35,14 @@ Project source code: [https://github.com/jarviscanada/jarvis_data_eng_BrandonAng
 
 
 ## Highlighted Projects
-**Web app for resturant** [[GitHub](https://github.com/jarviscanada/jarvis_profile_builder)]: Suspendisse a tincidunt odio. Suspendisse posuere luctus aliquet. Quisque magna tellus, tempor vitae arcu sed, volutpat scelerisque lacus. Aliquam varius pulvinar dapibus. Ut a tincidunt sem. Aenean sollicitudin fringilla erat ut imperdiet. Phasellus fermentum, enim vitae laoreet elementum, eros nisl hendrerit lorem.
+**Basic Fighting Game** [[GitHub](https://github.com/Kelldav/FinalProj)]: Using Unity and various loyalty free assets created a simple fighting game. Linked Animations together, scripted the entire game, and setup sound effects.
 
-**Machine Learning**: Suspendisse a tincidunt odio. Suspendisse posuere luctus aliquet. Quisque magna tellus, tempor vitae arcu sed, volutpat scelerisque lacus. Aliquam varius pulvinar dapibus. Ut a tincidunt sem. Aenean sollicitudin fringilla erat ut imperdiet. Phasellus fermentum, enim vitae laoreet elementum, eros nisl hendrerit lorem.
+**CAPTCHA Test Solver**: Used Machine learning technology to create a program that can solve CAPTCHA test if the questions are all handwritten numbers. Afterwards Computer vision technology was used in order to test accuracy changes. To do such various filters were applied to see if they would help the program recognize it or if it made the result more obscure.
 
 
 ## Professional Experiences
 
-**Software Developer, Jarvis (2020-present)**: Donec mattis sed justo et sagittis. Vestibulum lacinia nulla ipsum. Curabitur imperdiet nibh vitae leo lacinia laoreet. Nullam accumsan, lectus ut maximus ultricies, augue justo egestas mi, vel bibendum felis.
+**Software Developer, Jarvis (2021-present)**: Created various scripts and learned new technology within Linux.
 
 **Secretary, Du-Finch Services (2016-2021)**: Communicate with customers and help resolve their issues.
 

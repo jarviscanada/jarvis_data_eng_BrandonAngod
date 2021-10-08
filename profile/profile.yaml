@@ -1,0 +1,119 @@
+# Preferred name (Characters only)
+name: "Brandon Angod"
+# Your GitHub repo root URL
+github_repo_root_url: https://github.com/jarviscanada/jarvis_data_eng_BrandonAngod
+
+# Introduce yourself, your academic and professional background.
+# What excites you about the software industry and your passion. At least 80 words
+summary:  My name is Brandon Angod. I graduated from Ontario Tech University with a major in Computer Science. Currently I am a Software Developer for Jarvis Consulting Group.The software industry excites me the most with how it has grown over the years and learn as much information within the industry as I can.
+
+# Group your skills by level.
+# Your skills can be anything software related (e.g. language, frameworks, methodologies, software, etc.).
+skills:
+  # At least 5 skills
+  proficient:
+    - Java
+    - Python
+    - C++
+    - Linux/Bash
+    - RDBMS/SQL
+    - Agile/Scrum
+    - Git
+  # At least 5 skills
+  competent:
+    - Scala
+    - Unity
+    - OpenCV
+    - Dart
+    - Flutter
+  # At least 5 skills
+  familiar:
+    - Tensorflow
+    - Clojure
+    - Assembly Language
+    - Unreal Engine 4
+    - OpenGL
+
+# List of Jarvis projects
+jarvis_projects:
+  - name: "Cluster Monitor"
+    git_url: "/linux_sql"
+    # The project description allows hiring managers to understand your project and technologies you used(e.g. programming languages, libraries, algorithms, hardware, tools, etc.).
+    # The project description must start with an action verb (https://bit.ly/3guO98u)
+    description: "Monitors activity on different clusters and records information to an sql table to allow the user to monitor usage over time and manipulate the data."
+  - name: "Core Java Apps"
+    git_url: "/core_java"
+    description:
+      - "Twitter App: WIP"
+      - "JDBC App: WIP"
+      - "Grep App: WIP"
+  - name: "Springboot App"
+    git_url: "/springboot"
+    description: ""
+  - name: "Python Data Analytics"
+    git_url: "/python_data_anlytics"
+    description: ""
+  - name: "Hadoop"
+    git_url: "/hadoop"
+    description: ""
+  - name: "Spark"
+    git_url: "/spark"
+    description: ""
+  - name: "Cloud/DevOps"
+    git_url: "/cloud_devops"
+    description: ""
+
+# List of personal or academic projects
+# Feel free to add more projects
+highlighted_projects:
+    #project name
+  - name: "Basic Fighting Game"
+    #URL is optional
+    git_url: "https://github.com/Kelldav/FinalProj"
+    # The project description must start with an action verb (https://bit.ly/3guO98u)
+    description: "Using Unity and various loyalty free assets created a simple fighting game. Linked Animations together, scripted the entire game, and setup sound effects."
+  - name: "CAPTCHA Test Solver"
+    git_url:
+    description: "Used Machine learning technology to create a program that can solve CAPTCHA test if the questions are all handwritten numbers. Afterwards Computer vision technology was used in order to test accuracy changes. To do such various filters were applied to see if they would help the program recognize it or if it made the result more obscure."
+
+#List of professional experience
+#The job description allows hiring managers to understand your job and the technologies you used(e.g. programming languages, libraries, algorithms, hardware, tools, etc.).
+#The description must be more than 25 words. If your experience is not software related, please focus on soft skills and achievements (e.g. team collaboration, problem-solving, improvements, communication).
+professional_experience:
+  #Write your Jarvis role as a professional experience rather than training.
+  - title: "Software Developer"
+    company: "Jarvis"
+    duration: "2021-present"
+    # The project description must start with an action verb (https://bit.ly/3guO98u)
+    description: "Created various scripts and learned new technology within Linux."
+  - title: "Secretary"
+    company: "Du-Finch Services"
+    duration: "2016-2021"
+    description: "Communicate with customers and help resolve their issues."
+
+#List of edcuation
+education: 
+  - school_name: "Ontario Tech University"
+    duration: "2016-2020"
+    degree: "Bachelor of Science"
+    department: "Computer Science"
+    # optional
+    awards_achievements:
+    #  - "Scholarship"
+    #  - "Dean's List (2015, 2016): Ut enim ad minim veniam"
+    #  - "GPA: 3.8/4.0"
+#Optional section
+others:
+    #category
+  #- title: "Certificates"
+    #list of items
+  #  bullets:
+  #    - "Udacity Machine Learning (2019)"
+  #- title: "Awards"
+  #  bullets:
+  #    - "Winner"
+  - title: "Activities/Hobbies"
+    bullets:
+      - "Competitive Gaming"
+      - "Building Keyboards and Minatures"
+      - "Collecting vinyls"
