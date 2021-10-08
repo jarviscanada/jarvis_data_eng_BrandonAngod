@@ -8,7 +8,7 @@ public interface RegexExc{
 
     public boolean isEmptyLine(String line);
 }
-class RegexExe implements RegexExc{
+class RegexExcImp implements RegexExc{
 
     public boolean matchJpeg(String filename){ return Pattern.matches("[\\S]+([.](jpg|jpeg))$", filename);}
 
