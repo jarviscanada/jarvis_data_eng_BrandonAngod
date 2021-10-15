@@ -3,6 +3,7 @@ import java.io.*;
 import java.util.Scanner;
 
 
+
 public class grepapp {
     private static String RegexPattern;
     private static String RootPath;
@@ -79,7 +80,7 @@ public class grepapp {
      * @throws IOException
      */
     private static void StrRegexParse() throws IOException  {
-        File fileArray[]=DirectoryStrtoFileArr(getRootPath());
+        File fileArray[]=StrToFileArr(getRootPath());
         FileWriter fwrite=new FileWriter(getOutFile());
         for(File file : fileArray){
             //Easier route using regex patterns
@@ -97,9 +98,9 @@ public class grepapp {
      * @param rootpath
      * @return
      */
-    private static File[] DirectoryStrtoFileArr(String rootpath){
-        File path = new File(rootpath);
-        return (path.listFiles());
+    public static File[] StrToFileArr(String rootpath){
+        File folder = new File(rootpath);
+        return (folder.listFiles());
     }
 
     /**
