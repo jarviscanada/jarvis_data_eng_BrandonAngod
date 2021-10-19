@@ -49,12 +49,12 @@ public class GrepAppLambdaImp implements GrepAppInt{
 
     @Override
     public String getRootPath() {
-        return getRootPath();
+        return RootPath;
     }
 
     @Override
     public String getOutFile() {
-        return getOutFile();
+        return OutFile;
     }
 
     @Override
@@ -78,7 +78,6 @@ public class GrepAppLambdaImp implements GrepAppInt{
 
     @Override
     public void StrRegexParse() throws IOException {
-        //TODO Fix so that the List can accomendate Regex
         FileWriter fwrite=new FileWriter(getOutFile());
         Map<String, String> fileContents = ConcatFile();
         //Easier route using regex patterns
