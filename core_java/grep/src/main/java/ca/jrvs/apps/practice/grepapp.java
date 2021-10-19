@@ -63,11 +63,11 @@ public class grepapp {
      * @return StringConcatinated
      * @throws FileNotFoundException
      */
-    private static String ConcatFile(File file) throws FileNotFoundException {
+    public static String ConcatTextFile(File file) throws FileNotFoundException {
         String concat="";
         Scanner sc1= new Scanner(file);
         while(sc1.hasNextLine()){
-            concat=concat+sc1;
+            concat += sc1.nextLine();
         }
         sc1.close();
         return(concat);
@@ -84,7 +84,7 @@ public class grepapp {
         FileWriter fwrite=new FileWriter(getOutFile());
         for(File file : fileArray){
             //Easier route using regex patterns
-            String fileContents = ConcatFile(file);
+            String fileContents = ConcatTextFile(file);
             if(fileContents.matches(getRegexPattern())){
                 fwrite.write(file.getName() + "\n");
             }
