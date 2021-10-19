@@ -3,6 +3,8 @@ package ca.jrvs.apps.practice;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.List;
+import java.util.Map;
 
 public interface GrepAppInt {
     /**
@@ -43,11 +45,11 @@ public interface GrepAppInt {
 
     /**
      * Take input of a file and return the strings within it concatonated within one string
-     * @param file
+     * @param
      * @return StringConcatinated
      * @throws FileNotFoundException
      */
-    String ConcatFile(File file) throws FileNotFoundException;
+    Map<String, String> ConcatFile() throws IOException;
 
     /**
      * Loads an array of files in a directory then creates a file writer.
@@ -62,5 +64,5 @@ public interface GrepAppInt {
      * @param rootpath
      * @return
      */
-    File[] DirectoryStrtoFileArr(String rootpath);
+    List<File> DirectoryStrtoFileList(String rootpath) throws IOException;
 }

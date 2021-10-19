@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 
 
-public class grepapp {
+public class grepapp{
     private static String RegexPattern;
     private static String RootPath;
     private static String OutFile;
@@ -13,7 +13,7 @@ public class grepapp {
      * Sets the private RegexPattern Variable
      * @param regexpattern
      */
-    private static void setRegexPattern(String regexpattern){
+    public static void setRegexPattern(String regexpattern){
         RegexPattern=regexpattern;
     }
 
@@ -21,7 +21,7 @@ public class grepapp {
      * Sets the private Rootpath variable
      * @param rootpath
      */
-    private static void setRootPath(String rootpath){
+    public static void setRootPath(String rootpath){
         RootPath = rootpath;
     }
 
@@ -29,7 +29,7 @@ public class grepapp {
      * Sets the private Outfile String variable
      * @param outfile
      */
-    private static void setOutFile(String outfile){
+    public static void setOutFile(String outfile){
         OutFile = outfile;
     }
 
@@ -79,7 +79,7 @@ public class grepapp {
      * If they do output the file's name to a text file.
      * @throws IOException
      */
-    private static void StrRegexParse() throws IOException  {
+    public static void StrRegexParse() throws IOException  {
         File fileArray[]=StrToFileArr(getRootPath());
         FileWriter fwrite=new FileWriter(getOutFile());
         for(File file : fileArray){
