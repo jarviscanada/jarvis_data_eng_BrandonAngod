@@ -81,7 +81,7 @@ To test my bash scripts and sql queries I simply gathered data within my tables 
 # Deployment
 To deploy the app I used GitHub to store the files, crontab to automate the execution of the script and docker to contain the instance of psql. This way the program will not be too demanding and operate with ease.
 
-#Improvements
+# Improvements
 -Improved user experience.
 
 -Add additional queries to help user find key information.
