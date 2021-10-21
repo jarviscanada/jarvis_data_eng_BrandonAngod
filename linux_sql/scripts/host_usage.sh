@@ -39,5 +39,5 @@ psql -h $psql_host -p $psql_port -d $db_name -U $psql_user -w << EOF
 INSERT INTO host_usage VALUES ('$timestamp','1','$memory_free','$cpu_idle','$cpu_kernel','$disk_io','$disk_available');
 SELECT *FROM host_usage
 EOF
-
+exit 0
 #psql -h localhost -U postgres -d postgres -W -c "INSERT INTO PUBLIC.host_info ($meminfo,$memory_free,$cpu_idle,$cpu_kernel,$disk_io,$disk_available)"
