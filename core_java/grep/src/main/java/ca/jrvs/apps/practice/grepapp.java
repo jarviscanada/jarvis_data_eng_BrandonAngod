@@ -1,7 +1,7 @@
 package ca.jrvs.apps.practice;
 import java.io.*;
 import java.util.Scanner;
-
+import java.util.regex.Pattern;
 
 
 public class grepapp{
@@ -85,7 +85,7 @@ public class grepapp{
         for(File file : fileArray){
             //Easier route using regex patterns
             String fileContents = ConcatTextFile(file);
-            if(fileContents.matches(getRegexPattern())){
+            if(Pattern.matches(getRegexPattern(),fileContents)){
                 fwrite.write(file.getName() + "\n");
             }
         }
