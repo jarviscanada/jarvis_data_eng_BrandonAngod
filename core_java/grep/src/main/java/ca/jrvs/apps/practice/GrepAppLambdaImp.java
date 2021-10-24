@@ -12,18 +12,15 @@ public class GrepAppLambdaImp implements GrepAppInt{
     private static String OutFile;
 
     public static void main(String[] args) {
-            if(args.length != 3) {
-                grepapp Grep=new grepapp();
-                Grep.setRegexPattern(args[0]);
-                Grep.setRootPath(args[1]);
-                Grep.setOutFile(args[2]);
-
-                try{
-                    Grep.StrRegexParse();
-                }catch(Exception ex){
-                    ex.printStackTrace();
-                }
-            }
+        GrepAppLambdaImp Grep=new GrepAppLambdaImp();
+        Grep.setRegexPattern(args[0]);
+        Grep.setRootPath(args[1]);
+        Grep.setOutFile(args[2]);
+        try{
+            Grep.StrRegexParse();
+        }catch(Exception ex){
+            ex.printStackTrace();
+        }
     }
 
     @Override
@@ -81,12 +78,18 @@ public class GrepAppLambdaImp implements GrepAppInt{
         FileWriter fwrite=new FileWriter(getOutFile());
         Map<String, String> fileContents = ConcatFile();
         //Easier route using regex patterns
-        Map<String,String> collection = fileContents.entrySet().parallelStream()
-                                            .filter(e -> e.toString().matches(getRegexPattern()))
-                                            .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue));
-        for (Map.Entry<String, String> entry : collection.entrySet()) {
-            fwrite.write(entry.getKey());
-        }
+        List<Map.Entry<String,String>> collection = fileContents.entrySet().stream()
+                                            .filter(e -> e.getValue().matches(getRegexPattern()))
+                                            .collect(Collectors.toList());
+
+        collection.forEach(x-> {
+            try {
+                fwrite.write(x.getKey());
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        });
+
         //Cleanup
         fwrite.close();
 
