@@ -1,6 +1,9 @@
 # Introduction
-What does this app do? What technologies have been used? (JDBC, PSQL, MVN, etc..)
-This application is designed to manipulate entries within a pre-existing PSQL database. It utilizes Maven to build the entire project and JDBC to access the database. The program has a few commands such as:
+This application is designed to manipulate entries within a pre-existing PSQL database. 
+It utilizes Maven to build the entire project and JDBC to access the database. The program contains
+the basic CRUD operations. This database setup follows the Data Access Object(DAO) pattern.
+This allows better operation of the different tables within the database and allow you to
+perform the operations as per neccesary.
 
 # Implementaiton
 ## ER Diagram
