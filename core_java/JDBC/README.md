@@ -1,9 +1,9 @@
 # Introduction
-This application is designed to manipulate entries within a pre-existing PSQL database. 
+This application is designed to manipulate entries within a pre-existing PSQL database.
 It utilizes Maven to build the entire project and JDBC to access the database. The program contains
 the basic CRUD operations. This database setup follows the Data Access Object(DAO) pattern.
-This allows better operation of the different tables within the database and allow you to
-perform the operations as per neccesary.
+This allows better operation of the different tables within the database and allows you to
+perform the operations as necessary.
 
 # Implementaiton
 ## ER Diagram
