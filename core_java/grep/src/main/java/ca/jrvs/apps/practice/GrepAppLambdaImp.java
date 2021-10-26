@@ -55,19 +55,19 @@ public class GrepAppLambdaImp implements GrepAppInt{
     }
 
     @Override
-    public Map<String, String> ConcatFile() throws IOException {
+    public HashMap<Integer, String> ConcatFile() throws IOException {
         List<File> dirList= DirectoryStrtoFileList(getRootPath());
-        Map<String, String> concat = new HashMap<>();
+        HashMap<Integer, String> concat = new HashMap<>();
         String contents="";
-
+        int iterator=0;
         for(File f : dirList) {
             Scanner sc1 = new Scanner(f);
 
             while (sc1.hasNextLine()) {
-                contents += sc1.nextLine();
+                iterator +=1;
+                contents = sc1.nextLine();
+                concat.put(iterator,contents);
             }
-            concat.put(f.getName(),contents);
-            contents="";
             sc1.close();
         }
         return(concat);
@@ -76,15 +76,16 @@ public class GrepAppLambdaImp implements GrepAppInt{
     @Override
     public void StrRegexParse() throws IOException {
         FileWriter fwrite=new FileWriter(getOutFile());
-        Map<String, String> fileContents = ConcatFile();
+        HashMap<Integer, String> fileContents = ConcatFile();
         //Easier route using regex patterns
-        List<Map.Entry<String,String>> collection = fileContents.entrySet().stream()
+        List<HashMap.Entry<Integer,String>> collection = fileContents.entrySet().stream()
                                             .filter(e -> e.getValue().matches(getRegexPattern()))
                                             .collect(Collectors.toList());
 
         collection.forEach(x-> {
             try {
-                fwrite.write(x.getKey());
+                System.out.println(x);
+                fwrite.write(x.getValue() + "\n");
             } catch (IOException e) {
                 e.printStackTrace();
             }

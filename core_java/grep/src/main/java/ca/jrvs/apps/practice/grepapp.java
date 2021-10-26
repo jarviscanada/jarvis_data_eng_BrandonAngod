@@ -1,5 +1,7 @@
 package ca.jrvs.apps.practice;
 import java.io.*;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 import java.util.regex.Pattern;
 
@@ -63,11 +65,11 @@ public class grepapp{
      * @return StringConcatinated
      * @throws FileNotFoundException
      */
-    public static String ConcatTextFile(File file) throws FileNotFoundException {
-        String concat="";
+    public static List<String> ConcatTextFile(File file) throws FileNotFoundException {
+        List<String> concat=new ArrayList<>();
         Scanner sc1= new Scanner(file);
         while(sc1.hasNextLine()){
-            concat += sc1.nextLine();
+            concat.add(sc1.nextLine());
         }
         sc1.close();
         return(concat);
@@ -84,10 +86,16 @@ public class grepapp{
         FileWriter fwrite=new FileWriter(getOutFile());
         for(File file : fileArray){
             //Easier route using regex patterns
-            String fileContents = ConcatTextFile(file);
-            if(Pattern.matches(getRegexPattern(),fileContents)){
-                fwrite.write(file.getName() + "\n");
-            }
+            List<String> fileContents = ConcatTextFile(file);
+            fileContents.forEach(x -> {
+                if (Pattern.matches(getRegexPattern(), x)) {
+                    try {
+                        fwrite.write(file.getName() + "\n");
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                }
+            });
         }
         //Cleanup
         fwrite.close();

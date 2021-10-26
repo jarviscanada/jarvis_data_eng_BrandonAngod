@@ -49,7 +49,7 @@ public interface GrepAppInt {
      * @return StringConcatinated
      * @throws FileNotFoundException
      */
-    Map<String, String> ConcatFile() throws IOException;
+    Map<Integer, String> ConcatFile() throws IOException;
 
     /**
      * Loads an array of files in a directory then creates a file writer.
