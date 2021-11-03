@@ -2,15 +2,15 @@
 This application utilizes Java 8 to recreate the same function as the Linux command "grep". To do this I used methods from Java's util libraries such as Scanners and Regex.pattern(). I also used FileWriter to record the findings within separate files and the .io's methods to read a file. To build the files I am using Maven. This project also features another method of running the program using lambda functions and stream APIs to increase performance for larger files. Deployment of the project was done using Docker and the code was written using Intellij.
 
 # Quick Start
+```
 To start the application with the code you can simply build it using the command mvn clean install.
 Afterward, it will create a .jar file within the target/ file. So simply run:
 
 java -jar target/grep-1.0-SNAPSHOT.jar <RegexPattern> <RootPath> <Outfile>
 
 If you want to use the non-Lambda version and opt for the version using a scanner change the pom.xml from:
-
 ca.jrvs.apps.practice.GrepAppLambdaImp -> ca.jrvs.apps.practice.grepapp
-
+```
 # Implemenation
 ## Pseudocode
 write `process` method pseudocode.
@@ -62,7 +62,6 @@ Once my program passed the first test I proceeded to the second test to measure 
 To dockerize my application I packaged the program using maven and then created a docker image using the package as its frame.
 
 # Improvement
-List three things you can improve in this project.
 1. Memory Issues.
 2. Commenting and documentation.
 3. Optimization of methods.

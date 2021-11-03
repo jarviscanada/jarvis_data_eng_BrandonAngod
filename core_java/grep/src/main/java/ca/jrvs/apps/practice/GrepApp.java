@@ -6,7 +6,7 @@ import java.util.Scanner;
 import java.util.regex.Pattern;
 
 
-public class grepapp{
+public class GrepApp{
     private static String RegexPattern;
     private static String RootPath;
     private static String OutFile;
@@ -67,11 +67,11 @@ public class grepapp{
      */
     public static List<String> ConcatTextFile(File file) throws FileNotFoundException {
         List<String> concat=new ArrayList<>();
-        Scanner sc1= new Scanner(file);
-        while(sc1.hasNextLine()){
-            concat.add(sc1.nextLine());
+        Scanner scanner= new Scanner(file);
+        while(scanner.hasNextLine()){
+            concat.add(scanner.nextLine());
         }
-        sc1.close();
+        scanner.close();
         return(concat);
     }
 
@@ -91,8 +91,8 @@ public class grepapp{
                 if (Pattern.matches(getRegexPattern(), x)) {
                     try {
                         fwrite.write(file.getName() + "\n");
-                    } catch (IOException e) {
-                        e.printStackTrace();
+                    } catch (IOException ex) {
+                        logger.error("Could not write to OutFile",ex);
                     }
                 }
             });

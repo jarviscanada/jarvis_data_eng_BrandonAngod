@@ -17,9 +17,9 @@ public class GrepAppLambdaImp implements GrepAppInt{
         Grep.setRootPath(args[1]);
         Grep.setOutFile(args[2]);
         try{
-            Grep.StrRegexParse();
+            Grep.strRegexParse();
         }catch(Exception ex){
-            ex.printStackTrace();
+            logger.error("Error Running strRegexParse",ex);
         }
     }
 
@@ -55,7 +55,7 @@ public class GrepAppLambdaImp implements GrepAppInt{
     }
 
     @Override
-    public HashMap<Integer, String> ConcatFile() throws IOException {
+    public HashMap<Integer, String> concatFile() throws IOException {
         List<File> dirList= DirectoryStrtoFileList(getRootPath());
         HashMap<Integer, String> concat = new HashMap<>();
         String contents="";
@@ -74,9 +74,9 @@ public class GrepAppLambdaImp implements GrepAppInt{
     }
 
     @Override
-    public void StrRegexParse() throws IOException {
+    public void strRegexParse() throws IOException {
         FileWriter fwrite=new FileWriter(getOutFile());
-        HashMap<Integer, String> fileContents = ConcatFile();
+        HashMap<Integer, String> fileContents = concatFile();
         //Easier route using regex patterns
         List<HashMap.Entry<Integer,String>> collection = fileContents.entrySet().stream()
                                             .filter(e -> e.getValue().matches(getRegexPattern()))
@@ -84,10 +84,9 @@ public class GrepAppLambdaImp implements GrepAppInt{
 
         collection.forEach(x-> {
             try {
-                System.out.println(x);
                 fwrite.write(x.getValue() + "\n");
             } catch (IOException e) {
-                e.printStackTrace();
+                logger.error("Failed to write to Outfile",e);
             }
         });
 
