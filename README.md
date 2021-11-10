@@ -21,17 +21,6 @@ Project source code: [https://github.com/jarviscanada/jarvis_data_eng_BrandonAng
       
   - Grep App: Searches a directory for specific patterns and outputs the occurrences within a specified text file. This application functions similar to Linux's Grep command and is written in Java 8. The user types in a file path to search and an output file to write to. After the command is run the output file will contain any occurrence of the specified pattern. 
   - JDBC App: Uses the JDBC driver to connect to a PSQL database using Java to perform basic CRUD operations. First, the application creates establishes the connection then in the JDBC executor class performs various operations to a pre-existing customer database. 
-  - Twitter App: WIP
-
-**Springboot App** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_BrandonAngod/tree/master/springboot)]: Not Started
-
-**Python Data Analytics** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_BrandonAngod/tree/master/python_data_anlytics)]: Not Started
-
-**Hadoop** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_BrandonAngod/tree/master/hadoop)]: Not Started
-
-**Spark** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_BrandonAngod/tree/master/spark)]: Not Started
-
-**Cloud/DevOps** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_BrandonAngod/tree/master/cloud_devops)]: Not Started
 
 
 ## Highlighted Projects
