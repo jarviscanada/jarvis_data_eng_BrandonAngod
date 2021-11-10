@@ -10,6 +10,7 @@ public class GrepApp{
     private static String RegexPattern;
     private static String RootPath;
     private static String OutFile;
+    private static Logger logger = Logger.getLogger(JLinkedList.class.getName());
 
     /**
      * Sets the private RegexPattern Variable
@@ -92,7 +93,9 @@ public class GrepApp{
                     try {
                         fwrite.write(file.getName() + "\n");
                     } catch (IOException ex) {
-                        logger.error("Could not write to OutFile",ex);
+                        logger.setLevel(Level.SEVERE);
+
+                        logger.severe("Could not write to OutFile",ex);
                     }
                 }
             });

@@ -10,6 +10,8 @@ public class GrepAppLambdaImp implements GrepAppInt{
     private static String RegexPattern;
     private static String RootPath;
     private static String OutFile;
+    private static Logger logger = Logger.getLogger(JLinkedList.class.getName());
+
 
     public static void main(String[] args) {
         GrepAppLambdaImp Grep=new GrepAppLambdaImp();
@@ -19,7 +21,8 @@ public class GrepAppLambdaImp implements GrepAppInt{
         try{
             Grep.strRegexParse();
         }catch(Exception ex){
-            logger.error("Error Running strRegexParse",ex);
+            logger.setLevel(Level.SEVERE);
+            logger.severe("Error Running strRegexParse",ex);
         }
     }
 
@@ -86,7 +89,8 @@ public class GrepAppLambdaImp implements GrepAppInt{
             try {
                 fwrite.write(x.getValue() + "\n");
             } catch (IOException e) {
-                logger.error("Failed to write to Outfile",e);
+                logger.setLevel(Level.SEVERE);
+                logger.severe("Failed to write to Outfile",e);
             }
         });
 
