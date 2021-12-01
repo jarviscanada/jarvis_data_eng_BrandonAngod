@@ -1,13 +1,26 @@
 package ca.jrvs.apps.twitter.model;
 
+import java.net.URI;
+
 public class Tweet {
     private String created_at,text,id_str,source;
     private long id;
     //User user;
+    private URI uri;
+
+
     private int retweet_count,favorite_count;
     private Coordinates coordinates;
     private Entities entities;
     private Boolean truncated,favorited,retweeted;
+
+    public URI getUri() {
+        return uri;
+    }
+
+    public void setUri(URI uri) {
+        this.uri = uri;
+    }
 
     public String getCreated_at() {
         return created_at;
