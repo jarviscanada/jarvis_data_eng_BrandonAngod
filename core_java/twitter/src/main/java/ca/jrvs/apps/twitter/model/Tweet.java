@@ -14,6 +14,10 @@ public class Tweet {
     private Entities entities;
     private Boolean truncated,favorited,retweeted;
 
+    public Tweet(String body, Float[] cord){
+        this.coordinates.setCoordinates(cord);
+        this.text = body;
+    }
     public URI getUri() {
         return uri;
     }
