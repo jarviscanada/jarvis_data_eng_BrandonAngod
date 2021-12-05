@@ -4,6 +4,7 @@ import ca.jrvs.apps.twitter.interfaces.Controller;
 import ca.jrvs.apps.twitter.interfaces.Service;
 import ca.jrvs.apps.twitter.model.Tweet;
 
+import java.net.URISyntaxException;
 import java.util.List;
 
 public class TwitterController implements Controller {
@@ -11,6 +12,11 @@ public class TwitterController implements Controller {
     private static final String COMMA=",";
 
     private Service service;
+
+    public TwitterController(Service service) {
+        this.service = service;
+    }
+
     @Override
     public Tweet postTweet(String[] args) {
         //Check Arguments
@@ -23,7 +29,7 @@ public class TwitterController implements Controller {
         String[] coordinateString=coordinates.split(COORD_SEP);
         Float[] cordFloatArray = new Float[2];
         for(int i=0;i<2;i++){
-            cordFloatArray[i] = Float.parseFloat(coordinateString[i])
+            cordFloatArray[i] = Float.parseFloat(coordinateString[i]);
         }
 
         Tweet tweet = new Tweet(body,cordFloatArray);
@@ -32,12 +38,25 @@ public class TwitterController implements Controller {
     }
 
     @Override
-    public Tweet showTweet(String[] args) {
-        return null;
+    public Tweet showTweet(String[] args) throws URISyntaxException {
+        //Check Arguments
+        if(args.length!=3){
+            //False amount of arguemnts
+            throw new IllegalArgumentException("Usage: TwitterCLIApp post / message / longitude:latitude");
+        }
+        String s = args[1];
+        String[] fields = args[2].split(COMMA);
+        return service.showTweet(s,fields);
     }
 
     @Override
-    public List<Tweet> deleteTweet(String[] args) {
-        return null;
+    public List<Tweet> deleteTweet(String[] args) throws URISyntaxException {
+        //Check Arguments
+        if(args.length!=2){
+            //False amount of arguemnts
+            throw new IllegalArgumentException("Usage: TwitterCLIApp post / message / longitude:latitude");
+        }
+        String fields[] = args[1].split(COMMA);
+        return service.deleteTweets(fields);
     }
 }

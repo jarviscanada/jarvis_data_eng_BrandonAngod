@@ -1,5 +1,7 @@
 package ca.jrvs.apps.twitter.interfaces;
 import ca.jrvs.apps.twitter.model.Tweet;
+
+import java.net.URISyntaxException;
 import java.util.List;
 
 public interface Controller {
@@ -20,7 +22,7 @@ public interface Controller {
      * @return a tweet
      * @throws IllegalArgumentException if args are invalid
      */
-    Tweet showTweet(String[] args);
+    Tweet showTweet(String[] args) throws URISyntaxException;
 
     /**
      * Parse user argument and delete tweets by calling service classes
@@ -29,6 +31,6 @@ public interface Controller {
      * @return a list of deleted tweets
      * @throws IllegalArgumentException if args are invalid
      */
-    List<Tweet> deleteTweet(String[] args);
+    List<Tweet> deleteTweet(String[] args) throws URISyntaxException;
 
 }

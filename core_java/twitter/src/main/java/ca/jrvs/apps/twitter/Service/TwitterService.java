@@ -1,10 +1,19 @@
 package ca.jrvs.apps.twitter.Service;
 
-import ca.jrvs.apps.twitter.DAO.TwitterDAO;
+import ca.jrvs.apps.twitter.interfaces.CrdDao;
+import ca.jrvs.apps.twitter.interfaces.Service;
 import ca.jrvs.apps.twitter.model.Tweet;
 
-public class TwitterService {
-    private TwitterDAO DAO;
+import java.net.URISyntaxException;
+import java.util.List;
+
+public class TwitterService implements Service {
+    private CrdDao DAO;
+
+    public TwitterService(CrdDao dao) {
+        this.DAO = dao;
+    }
+
     public boolean validateTweet(Tweet tweet){
         //Check Length
         if(tweet.getText().length() > 141 ){
@@ -20,14 +29,26 @@ public class TwitterService {
         //Passed all checks return true
         return true;
     }
-    public int postTweet(Tweet tweet){
+    public Tweet postTweet(Tweet tweet){
         if(validateTweet(tweet)) {
-            DAO.create(tweet);
-            return 0;
+            return DAO.create(tweet);
         }
         else{
-            return -1;
+            return null;
         }
+    }
+
+    @Override
+    public Tweet showTweet(String id, String[] fields) throws URISyntaxException {
+        Tweet tweet = DAO.findById(id);
+        return tweet;
+    }
+
+    @Override
+    public List<Tweet> deleteTweets(String[] ids) throws URISyntaxException {
+        List<Tweet> tweet = DAO.deleteById(ids);
+        return tweet;
+
     }
 
 }

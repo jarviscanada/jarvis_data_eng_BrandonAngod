@@ -14,9 +14,9 @@ import java.net.URISyntaxException;
 public class TwitterDAO implements CrdDao<Tweet, String> {
     //URI Constants
     private static final String API_BASE_URI = "https://api.twitter.com";
-    private static final String POST_PATH = "/1.1/statuses/update.json";
-    private static final String SHOW_PATH = "/1.1/statuses/show.json";
-    private static final String DELETE_PATH = "/1.1/statuses/destroy";
+    private static final String POST_PATH = "/2/statuses/update.json";
+    private static final String SHOW_PATH = "/2/statuses/show.json";
+    private static final String DELETE_PATH = "/2/statuses/destroy";
     //URI Symbols
     private static final String QUERY_SYM = "?";
     private static final String AMPERSAND = "&";
@@ -27,15 +27,12 @@ public class TwitterDAO implements CrdDao<Tweet, String> {
 
     private HttpHelper httpHelper;
 
-    @Autowired
-    public void TwitterDao(HttpHelper httpHelper){
+    public TwitterDAO(HttpHelper httpHelper) {
         this.httpHelper = httpHelper;
     }
 
     @Override
     public Tweet create(Tweet tweet) {
-        //URI uri;
-        //uri = tweet.getUri();
         HttpResponse response = httpHelper.httpPost(tweet.getUri());
         return parseTweet(response,HTTP_OK);
     }
@@ -64,14 +61,17 @@ public class TwitterDAO implements CrdDao<Tweet, String> {
         }
         return tweet;
     }
-
     @Override
-    public Tweet findById(String s) {
-        return null;
+    public Tweet findById(String s) throws URISyntaxException {
+        URI uri = new URI(API_BASE_URI + SHOW_PATH + "/recent?conversation_id:" + s);
+        HttpResponse response = httpHelper.httpGet(uri);
+        return parseTweet(response,HTTP_OK);
     }
 
     @Override
-    public Tweet deleteById(String s) {
-        return null;
+    public Tweet deleteById(String s) throws URISyntaxException {
+        URI uri = new URI(API_BASE_URI + DELETE_PATH + "/recent?conversation_id:" + s);
+        HttpResponse response = httpHelper.httpGet(uri);
+        return parseTweet(response,HTTP_OK);
     }
 }
