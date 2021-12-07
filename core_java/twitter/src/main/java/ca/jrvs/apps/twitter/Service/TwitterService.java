@@ -13,14 +13,14 @@ public class TwitterService implements Service {
     public TwitterService(CrdDao dao) {
         this.DAO = dao;
     }
-
+    public TwitterService(){}
     public boolean validateTweet(Tweet tweet){
         //Check Length
         if(tweet.getText().length() > 141 ){
             return false;
         }
         //Check Longittude lattitude
-        Float[] coordinates=tweet.getCoordinates().getCoordinates();
+        float[] coordinates=tweet.getCoordinates().getCoordinates();
         for(int i=0;i<2;i++){
             if(coordinates[i] >= 180 || coordinates[i] <= -180){
                 return false;
@@ -31,7 +31,7 @@ public class TwitterService implements Service {
     }
     public Tweet postTweet(Tweet tweet){
         if(validateTweet(tweet)) {
-            return DAO.create(tweet);
+            return (Tweet) DAO.create(tweet);
         }
         else{
             return null;
@@ -40,13 +40,13 @@ public class TwitterService implements Service {
 
     @Override
     public Tweet showTweet(String id, String[] fields) throws URISyntaxException {
-        Tweet tweet = DAO.findById(id);
+        Tweet tweet = (Tweet) DAO.findById(id);
         return tweet;
     }
 
     @Override
     public List<Tweet> deleteTweets(String[] ids) throws URISyntaxException {
-        List<Tweet> tweet = DAO.deleteById(ids);
+        List<Tweet> tweet = (List<Tweet>) DAO.deleteById(ids);
         return tweet;
 
     }

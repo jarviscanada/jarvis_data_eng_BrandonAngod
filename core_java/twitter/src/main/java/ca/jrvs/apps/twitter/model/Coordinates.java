@@ -1,14 +1,18 @@
 package ca.jrvs.apps.twitter.model;
 
 public class Coordinates {
-    private Float[] coordinates;
+    private float[] coordinates;
     private String type;
 
-    public Float[] getCoordinates() {
-        return coordinates;
+    public Coordinates(float[] coordinates) {
+        this.coordinates = coordinates;
     }
 
-    public void setCoordinates(Float[] coordinates) {
+    public float[] getCoordinates() {
+        return this.coordinates;
+    }
+
+    public void setCoordinates(float[] coordinates) {
         this.coordinates = coordinates;
     }
 

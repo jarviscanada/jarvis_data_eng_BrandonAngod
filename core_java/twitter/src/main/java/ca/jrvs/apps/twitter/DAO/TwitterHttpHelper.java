@@ -23,16 +23,17 @@ public class TwitterHttpHelper implements HttpHelper {
     private HttpClient httpClient;
 
     public TwitterHttpHelper(String consumerKey,String consumerSecret, String accessToken, String tokenSecret){
-        consumer = new CommonsHttpOAuthConsumer(consumerKey, consumerSecret);
-        consumer.setTokenWithSecret(accessToken, tokenSecret);
-        httpClient = new DefaultHttpClient();
+        System.out.println(consumerKey + " ; " + consumerSecret + " ; " + accessToken + " ; " + tokenSecret + " ; " );
+        this.consumer = new CommonsHttpOAuthConsumer(consumerKey, consumerSecret);
+        this.consumer.setTokenWithSecret(accessToken, tokenSecret);
+        this.httpClient = new DefaultHttpClient();
     }
     @Override
     public HttpResponse httpPost(URI uri) {
         try{
             return executeHttpRequest(HttpMethod.POST, uri,null);
         } catch(OAuthException | IOException | IllegalAccessException e){
-            throw new RuntimeException("OAuth/IOException: ",e);
+            throw new RuntimeException("OAuth/IOException: On Post",e);
         }
     }
 
@@ -47,8 +48,8 @@ public class TwitterHttpHelper implements HttpHelper {
     private HttpResponse executeHttpRequest(HttpMethod method, URI uri, StringEntity stringEntity) throws IOException, OAuthMessageSignerException, OAuthExpectationFailedException, OAuthCommunicationException, IllegalAccessException {
         if(method == HttpMethod.GET){
             HttpGet request = new HttpGet(uri);
-            consumer.sign(request);
-            return httpClient.execute(request);
+            this.consumer.sign(request);
+            return this.httpClient.execute(request);
         }
 
         else if(method == HttpMethod.POST){
@@ -56,8 +57,8 @@ public class TwitterHttpHelper implements HttpHelper {
             if(stringEntity != null){
                 request.setEntity(stringEntity);
             }
-            consumer.sign(request);
-            return httpClient.execute(request);
+            this.consumer.sign(request);
+            return this.httpClient.execute(request);
         }
 
         else{

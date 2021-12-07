@@ -12,12 +12,14 @@ import ca.jrvs.apps.twitter.model.Tweet;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+import java.net.URISyntaxException;
+
 public class TwitterCLIApp {
     private Controller controller;
     private String USAGE="TwitterApp post|show|delete [options]";
     public TwitterCLIApp(Controller controller){this.controller = controller;}
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws URISyntaxException {
         String consumerKey = System.getenv("consumerKey");
         String consumerSecret = System.getenv("consumerSecret");
         String accessToken = System.getenv("accessToken");
@@ -31,7 +33,7 @@ public class TwitterCLIApp {
 
         app.run(args);
     }
-    public void run(String[] args){
+    public void run(String[] args) throws URISyntaxException {
         if(args.length == 0){
             throw new IllegalArgumentException(USAGE);
         }

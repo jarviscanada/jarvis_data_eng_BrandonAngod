@@ -2,6 +2,7 @@ package ca.jrvs.apps.twitter.controller;
 
 import ca.jrvs.apps.twitter.interfaces.Controller;
 import ca.jrvs.apps.twitter.interfaces.Service;
+import ca.jrvs.apps.twitter.model.Coordinates;
 import ca.jrvs.apps.twitter.model.Tweet;
 
 import java.net.URISyntaxException;
@@ -27,11 +28,11 @@ public class TwitterController implements Controller {
         String body = args[1];
         String coordinates = args[2];
         String[] coordinateString=coordinates.split(COORD_SEP);
-        Float[] cordFloatArray = new Float[2];
+        float[] cordFloatArray = new float[2];
         for(int i=0;i<2;i++){
             cordFloatArray[i] = Float.parseFloat(coordinateString[i]);
         }
-
+        //Coordinates cord = new Coordinates(cordFloatArray);
         Tweet tweet = new Tweet(body,cordFloatArray);
 
         return service.postTweet(tweet);

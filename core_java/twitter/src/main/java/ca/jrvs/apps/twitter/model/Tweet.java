@@ -10,13 +10,13 @@ public class Tweet {
 
 
     private int retweet_count,favorite_count;
-    private Coordinates coordinates;
+    private Coordinates cordinates;
     private Entities entities;
     private Boolean truncated,favorited,retweeted;
 
-    public Tweet(String body, Float[] cord){
-        this.coordinates.setCoordinates(cord);
+    public Tweet(String body, float[] cord){
         this.text = body;
+        this.cordinates.setCoordinates(cord);
     }
     public URI getUri() {
         return uri;
@@ -83,11 +83,11 @@ public class Tweet {
     }
 
     public Coordinates getCoordinates() {
-        return coordinates;
+        return cordinates;
     }
 
     public void setCoordinates(Coordinates coordinates) {
-        this.coordinates = coordinates;
+        this.cordinates = coordinates;
     }
 
     public Entities getEntities() {
