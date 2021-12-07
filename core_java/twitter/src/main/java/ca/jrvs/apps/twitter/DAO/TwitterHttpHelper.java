@@ -66,5 +66,9 @@ public class TwitterHttpHelper implements HttpHelper {
         }
 
     }
+
+    public static void main(String[] args) {
+
+    }
 }
 

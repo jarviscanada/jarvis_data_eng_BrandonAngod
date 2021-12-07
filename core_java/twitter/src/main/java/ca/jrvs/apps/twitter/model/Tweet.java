@@ -18,6 +18,10 @@ public class Tweet {
         this.text = body;
         this.cordinates.setCoordinates(cord);
     }
+    public Tweet(String body, Coordinates cord){
+        this.text = body;
+        this.cordinates = cord;
+    }
     public URI getUri() {
         return uri;
     }
