@@ -42,7 +42,7 @@ public class TwitterController implements Controller {
     public Tweet showTweet(String[] args) throws URISyntaxException {
         //Check Arguments
         if(args.length!=2){
-            //False amount of arguemnts
+            //False amount of arguments
             throw new IllegalArgumentException("Usage: TwitterCLIApp show <id>");
         }
         String s = args[1];
@@ -54,7 +54,7 @@ public class TwitterController implements Controller {
     public List<Tweet> deleteTweet(String[] args) throws URISyntaxException {
         //Check Arguments
         if(args.length!=2){
-            //False amount of arguemnts
+            //False amount of arguments
             throw new IllegalArgumentException("Usage: TwitterCLIApp delete <id>");
         }
         String fields[] = args[1].split(COMMA);

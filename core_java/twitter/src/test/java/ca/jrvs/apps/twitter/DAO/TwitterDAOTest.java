@@ -33,7 +33,7 @@ public class TwitterDAOTest extends TestCase {
         cord[1] = 1.0F;
         Coordinates cordinate = new Coordinates(cord);
         Tweet tweet = new Tweet(text,cordinate);
-        tweet.setId(234);
+        tweet.setId("234");
         tweet.setId_str("234");
         URI uri = null;
         try {
@@ -54,23 +54,23 @@ public class TwitterDAOTest extends TestCase {
     }
 
     @Test
-    public void testFindByID(){
-        String s = 1468598138508296199;
+    public void testFindByID() throws URISyntaxException {
+        String s = "1468598138508296199";
         Tweet tweet = new Tweet();
         tweet.setText("1");
-        tweet.setId(1468598138508296199);
+        tweet.setId("1468598138508296199");
         tweet.setId_str("1468598138508296199");
-        Tweet postedTweet = dao.findById(1468598138508296199);
-        assertEquals(tweet,);
+        Tweet postedTweet = dao.findById("1468598138508296199");
+        assertEquals(tweet,dao.findById(s));
     }
     @Test
-    public void testDeleteById(){
-        String s = 1468598138508296199;
+    public void testDeleteById() throws URISyntaxException {
+        String s = "1468598138508296199";
         Tweet tweet = new Tweet();
         tweet.setText("1");
-        tweet.setId(1468598138508296199);
+        tweet.setId("1468598138508296199");
         tweet.setId_str("1468598138508296199");
-        Tweet postedTweet = dao.deleteById(1468598138508296199);
-        assertNull(dao.findById(1468598138508296199));
+        Tweet postedTweet = dao.deleteById("1468598138508296199");
+        assertNull(dao.findById("1468598138508296199"));
     }
 }

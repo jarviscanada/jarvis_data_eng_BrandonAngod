@@ -1,10 +1,11 @@
 package ca.jrvs.apps.twitter.model;
 
+import java.math.BigInteger;
 import java.net.URI;
 
 public class Tweet {
     private String created_at,text,id_str,source;
-    private long id;
+    private BigInteger id;
     //User user;
     private URI uri;
 
@@ -22,6 +23,11 @@ public class Tweet {
         this.text = body;
         this.cordinates = cord;
     }
+
+    public Tweet() {
+
+    }
+
     public URI getUri() {
         return uri;
     }
@@ -62,12 +68,12 @@ public class Tweet {
         this.source = source;
     }
 
-    public long getId() {
-        return id;
+    public String getId() {
+        return id.toString();
     }
 
-    public void setId(long id) {
-        this.id = id;
+    public void setId(String id) {
+        this.id = new BigInteger(id);
     }
 
     public int getRetweet_count() {
