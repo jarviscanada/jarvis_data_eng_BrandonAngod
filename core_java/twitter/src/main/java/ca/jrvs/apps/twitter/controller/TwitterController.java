@@ -23,7 +23,7 @@ public class TwitterController implements Controller {
         //Check Arguments
         if(args.length!=3){
             //False amount of arguemnts
-            throw new IllegalArgumentException("Usage: TwitterCLIApp post / message / longitude:latitude");
+            throw new IllegalArgumentException("Usage: TwitterCLIApp post message longitude:latitude");
         }
         String body = args[1];
         String coordinates = args[2];
@@ -41,12 +41,12 @@ public class TwitterController implements Controller {
     @Override
     public Tweet showTweet(String[] args) throws URISyntaxException {
         //Check Arguments
-        if(args.length!=3){
+        if(args.length!=2){
             //False amount of arguemnts
-            throw new IllegalArgumentException("Usage: TwitterCLIApp post / message / longitude:latitude");
+            throw new IllegalArgumentException("Usage: TwitterCLIApp show <id>");
         }
         String s = args[1];
-        String[] fields = args[2].split(COMMA);
+        String[] fields = args[1].split(COMMA);
         return service.showTweet(s,fields);
     }
 
@@ -55,7 +55,7 @@ public class TwitterController implements Controller {
         //Check Arguments
         if(args.length!=2){
             //False amount of arguemnts
-            throw new IllegalArgumentException("Usage: TwitterCLIApp post / message / longitude:latitude");
+            throw new IllegalArgumentException("Usage: TwitterCLIApp delete <id>");
         }
         String fields[] = args[1].split(COMMA);
         return service.deleteTweets(fields);

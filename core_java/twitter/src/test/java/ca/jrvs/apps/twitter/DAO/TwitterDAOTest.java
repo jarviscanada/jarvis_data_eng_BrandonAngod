@@ -37,7 +37,7 @@ public class TwitterDAOTest extends TestCase {
         tweet.setId_str("234");
         URI uri = null;
         try {
-            uri = new URI("https://api.twitter.com//1.1/tweets");
+            uri = new URI("https://api.twitter.com/1.1/tweets");
         } catch (URISyntaxException e) {
             e.printStackTrace();
         }
@@ -51,5 +51,26 @@ public class TwitterDAOTest extends TestCase {
 
         assertNotNull(tweet.getCoordinates());
         assertEquals(cord,tweet.getCoordinates().getCoordinates());
+    }
+
+    @Test
+    public void testFindByID(){
+        String s = 1468598138508296199;
+        Tweet tweet = new Tweet();
+        tweet.setText("1");
+        tweet.setId(1468598138508296199);
+        tweet.setId_str("1468598138508296199");
+        Tweet postedTweet = dao.findById(1468598138508296199);
+        assertEquals(tweet,);
+    }
+    @Test
+    public void testDeleteById(){
+        String s = 1468598138508296199;
+        Tweet tweet = new Tweet();
+        tweet.setText("1");
+        tweet.setId(1468598138508296199);
+        tweet.setId_str("1468598138508296199");
+        Tweet postedTweet = dao.deleteById(1468598138508296199);
+        assertNull(dao.findById(1468598138508296199));
     }
 }

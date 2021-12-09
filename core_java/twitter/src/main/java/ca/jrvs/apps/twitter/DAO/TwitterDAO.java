@@ -14,9 +14,9 @@ import java.net.URISyntaxException;
 public class TwitterDAO implements CrdDao<Tweet, String> {
     //URI Constants
     private static final String API_BASE_URI = "https://api.twitter.com";
-    private static final String POST_PATH = "//1.1/statuses/update.json";
-    private static final String SHOW_PATH = "//1.1/statuses/show.json";
-    private static final String DELETE_PATH = "//1.1/statuses/destroy";
+    private static final String POST_PATH = "/1.1/statuses/update.json";
+    private static final String SHOW_PATH = "/1.1/statuses/show.json";
+    private static final String DELETE_PATH = "/1.1/statuses/destroy";
     //URI Symbols
     private static final String QUERY_SYM = "?";
     private static final String AMPERSAND = "&";
@@ -63,14 +63,14 @@ public class TwitterDAO implements CrdDao<Tweet, String> {
     }
     @Override
     public Tweet findById(String s) throws URISyntaxException {
-        URI uri = new URI(API_BASE_URI + SHOW_PATH + "/recent?conversation_id:" + s);
+        URI uri = new URI(API_BASE_URI + SHOW_PATH + "?conversation_id:" + s);
         HttpResponse response = httpHelper.httpGet(uri);
         return parseTweet(response,HTTP_OK);
     }
 
     @Override
     public Tweet deleteById(String s) throws URISyntaxException {
-        URI uri = new URI(API_BASE_URI + DELETE_PATH + "/recent?conversation_id:" + s);
+        URI uri = new URI(API_BASE_URI + DELETE_PATH + "?conversation_id:" + s);
         HttpResponse response = httpHelper.httpGet(uri);
         return parseTweet(response,HTTP_OK);
     }
