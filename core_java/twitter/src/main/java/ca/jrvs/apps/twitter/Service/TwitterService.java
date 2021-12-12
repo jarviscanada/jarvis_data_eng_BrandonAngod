@@ -5,6 +5,7 @@ import ca.jrvs.apps.twitter.interfaces.Service;
 import ca.jrvs.apps.twitter.model.Tweet;
 
 import java.net.URISyntaxException;
+import java.util.ArrayList;
 import java.util.List;
 
 public class TwitterService implements Service {
@@ -39,14 +40,22 @@ public class TwitterService implements Service {
     }
 
     @Override
-    public Tweet showTweet(String id, String[] fields) throws URISyntaxException {
+    public Tweet showTweet(String id,String[] fields) throws URISyntaxException {
         Tweet tweet = (Tweet) DAO.findById(id);
+        for(int i=0;i<fields.length;i++) {
+            if (tweet.getText().equals(fields[i])) {
+                tweet.setText(null);
+            }
+        }
         return tweet;
     }
 
     @Override
     public List<Tweet> deleteTweets(String[] ids) throws URISyntaxException {
-        List<Tweet> tweet = (List<Tweet>) DAO.deleteById(ids);
+        List<Tweet> tweet = new ArrayList<Tweet>();
+        for(int i=0;i<ids.length;i++) {
+            tweet.add(DAO.deleteById(ids[i]));
+        }
         return tweet;
 
     }

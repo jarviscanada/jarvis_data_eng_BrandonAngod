@@ -4,10 +4,8 @@ import ca.jrvs.apps.twitter.interfaces.CrdDao;
 import ca.jrvs.apps.twitter.interfaces.HttpHelper;
 import ca.jrvs.apps.twitter.model.Tweet;
 import org.apache.http.util.EntityUtils;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.apache.http.HttpResponse;
 import java.io.IOException;
-import java.io.UnsupportedEncodingException;
 import java.net.URI;
 import java.net.URISyntaxException;
 
@@ -37,7 +35,7 @@ public class TwitterDAO implements CrdDao<Tweet, String> {
         return parseTweet(response,HTTP_OK);
     }
 
-    private Tweet parseTweet(HttpResponse response, Integer StatusCode){
+    Tweet parseTweet(HttpResponse response, Integer StatusCode){
         Tweet tweet = null;
 
         int status = response.getStatusLine().getStatusCode();
