@@ -42,8 +42,9 @@ public class TwitterService implements Service {
     @Override
     public Tweet showTweet(String id,String[] fields) throws URISyntaxException {
         Tweet tweet = (Tweet) DAO.findById(id);
+        Set<String> tweetTextSet = new HashSet<String>(Arrays.asList(tweet.getText().split("\\s+")));
         for(int i=0;i<fields.length;i++) {
-            if (tweet.getText().equals(fields[i])) {
+            if (tweetTextSet.contains(fields[i])) {
                 tweet.setText(null);
             }
         }
