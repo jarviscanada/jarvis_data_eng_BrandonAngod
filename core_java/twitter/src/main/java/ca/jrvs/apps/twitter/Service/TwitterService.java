@@ -5,8 +5,7 @@ import ca.jrvs.apps.twitter.interfaces.Service;
 import ca.jrvs.apps.twitter.model.Tweet;
 
 import java.net.URISyntaxException;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public class TwitterService implements Service {
     private CrdDao DAO;
