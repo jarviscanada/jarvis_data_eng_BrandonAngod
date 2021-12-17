@@ -16,7 +16,7 @@ docker pull keldav/twitter
 # Design
 ## UML diagram
 
-![](/home/centos/dev/jarvis_data_eng_BrandonAngod/core_java/twitter/assets/1.PNG)
+![](assets/1.PNG)
 
 ## Models
 The main application calls upon TwitterHTTPHelper, TwitterDAO, TwitterService, and TwitterController class to handle requests by the user. Once the request from the user is received each class will work with one another to process the commands and output to user.
