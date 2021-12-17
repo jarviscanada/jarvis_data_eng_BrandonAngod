@@ -1,5 +1,5 @@
 # Introduction
-This application utilizes Twitters REST API in order to create, read, and delete tweets on twitter using HTTP Clients to send and receive data it. The program will deal with the API using HTTPHandler and handle the information by converting it into a variable. It will then return the user the information retrieved in clean into a clean and easy to read JSON file. The project is built using Maven and Tested using Mockito and Junit. After testing it was deployed to a docker container.
+This application utilizes Twitter's REST API in order to create, read, and delete tweets on twitter using HTTP Clients to send and receive data it. The program will deal with the API using HTTPHandler and handle the information by converting it into a variable. It will then return the user the information retrieved in clean into a clean and easy to read JSON file. The project is built using Maven and Tested using Mockito and Junit. After testing it was deployed to a docker container.
 
 # Quick Start
 - In order to package the program enter either command into the console
@@ -10,7 +10,7 @@ mvn package
 ```
 - To retrieve the program using docker enter the following command into the console.
 ```
-docker container TODO
+docker pull keldav/twitter
 ```
 
 # Design
@@ -29,12 +29,11 @@ The main application calls upon TwitterHTTPHelper, TwitterDAO, TwitterService, a
 - TwitterController
   - Proccesses input given to ensure the correct input is supplied and the correct amount of arguments are present. Then it will pass along required information to the TwitterService class.
 ## Spring
-- How you managed the dependencies using Spring?
-
+Used spring to convert dependencies into Bean's to simplify the declaration and usage of each dependency. Then used a IoC container to call upon each dependency and instantiate each bean.
 # Test
-Tested using JUnit and Mockito. JUnit was mainly to perform integration tests while Mockito was used to unit test the code. Each test script is built to try out each method with example inputs and outputs to see if the program acts appropriately.
+Tested using JUnit and Mockito. JUnit performed integration tests while Mockito was used to unit test the code. Each test script is built to try out each method with example inputs and outputs to see if the program acts appropriately.
 ## Deployment
-TODO
+Deployed a Docker image into a docker container available for retrieval for anybody who is interested in the project.
 
 # Improvements
 - Read replies of a tweet 

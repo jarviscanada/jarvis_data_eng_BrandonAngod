@@ -19,7 +19,7 @@ public class TwitterCLISpringBoot {
         app.run(args);
     }
 
-    @Override
+    //@Override
     public void run(String... args)throws Exception{
         app.run(args);
     }
