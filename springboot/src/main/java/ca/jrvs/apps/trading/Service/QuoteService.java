@@ -34,7 +34,7 @@ public class QuoteService {
                 .orElseThrow(() -> new IllegalArgumentException(ticker + " is invalid"));
     }
 
-    public void updateMarketData(){
+    public List<Quote> updateMarketData(){
         //Get Quotes
         List<Quote> quoteList = findAllQuotes();
         //Get IEXQuote
@@ -52,7 +52,7 @@ public class QuoteService {
             builtQuoteList.add(buildQuoteFromIexQuote(iexQuote));
         });
         //Save
-        quoteDao.saveAll(builtQuoteList);
+        return quoteDao.saveAll(builtQuoteList);
     }
 
     protected static Quote buildQuoteFromIexQuote(IexQuote iexQuote){
