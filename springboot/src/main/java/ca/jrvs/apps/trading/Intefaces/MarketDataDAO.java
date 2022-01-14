@@ -2,14 +2,16 @@ package ca.jrvs.apps.trading.Intefaces;
 
 import ca.jrvs.apps.trading.model.domain.IexQuote;
 
+import java.io.IOException;
+import java.net.URISyntaxException;
 import java.util.List;
 import java.util.Optional;
 
 public interface MarketDataDAO {
 
-    Optional<IexQuote> findById(String ticker);
+    Optional<IexQuote> findById(String ticker) throws IOException;
 
-    List<IexQuote> findAllById(Iterable<String> tickers);
+    List<IexQuote> findAllById(Iterable<String> tickers) throws URISyntaxException, IOException;
 
     boolean existsById(String s);
 

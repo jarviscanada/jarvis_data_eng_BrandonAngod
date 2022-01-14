@@ -1,8 +1,15 @@
 package ca.jrvs.apps.trading.DAO;
 
 import ca.jrvs.apps.trading.model.config.MarketDataConfig;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.google.gson.Gson;
+import org.apache.http.HttpResponse;
+import org.apache.http.client.methods.HttpGet;
 import org.apache.http.conn.HttpClientConnectionManager;
 import org.apache.http.impl.client.CloseableHttpClient;
+import org.apache.http.impl.client.HttpClients;
+import org.apache.http.util.EntityUtils;
+import org.json.JSONObject;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataRetrievalFailureException;
@@ -10,9 +17,10 @@ import org.springframework.stereotype.Repository;
 import org.slf4j.Logger;
 import ca.jrvs.apps.trading.model.domain.IexQuote;
 
-import java.util.Collections;
-import java.util.List;
-import java.util.Optional;
+import java.io.IOException;
+import java.net.URI;
+import java.net.URISyntaxException;
+import java.util.*;
 
 @Repository
 public class MarketDataDAO implements ca.jrvs.apps.trading.Intefaces.MarketDataDAO {
@@ -30,7 +38,7 @@ public class MarketDataDAO implements ca.jrvs.apps.trading.Intefaces.MarketDataD
     }
 
     @Override
-    public Optional<IexQuote> findById(String ticker){
+    public Optional<IexQuote> findById(String ticker) throws IOException {
         Optional<IexQuote> iexQuote;
         List<IexQuote> quotes = findAllById(Collections.singletonList(ticker));
 
@@ -45,12 +53,33 @@ public class MarketDataDAO implements ca.jrvs.apps.trading.Intefaces.MarketDataD
     }
 
     @Override
-    public List<IexQuote> findAllById(Iterable<String> tickers){
-        return null;
+    public List<IexQuote> findAllById(Iterable<String> tickers) throws IOException {
+        List<IexQuote> iexQuoteList = new ArrayList<IexQuote>();
+
+        String response = executeHttpGet(IEX_BATCH_URL);
+        JSONObject IexQuotesJson = new JSONObject(response);
+        if(IexQuotesJson.length() == 0){
+            throw new IllegalArgumentException("Invalid Ticker");
+        }
+        ObjectMapper objectMapper = new ObjectMapper();
+        iexQuoteList = Arrays.asList(objectMapper.readValue(IexQuotesJson.toString(),IexQuote.class));
+        return iexQuoteList;
     }
 
-    public Optional<String> executeHttpGet(String url){
-        return null;
+    public String executeHttpGet(String url) throws IOException {
+        try{
+            CloseableHttpClient client = HttpClients.createDefault();
+            HttpGet httpGet =new HttpGet(url);
+            HttpResponse response= client.execute(httpGet);
+            Scanner sc = new Scanner(response.getEntity().getContent());
+            String output = "";
+            while(sc.hasNextLine()){
+                output = output + sc.nextLine();
+            }
+            return output;
+        } catch(Exception e){
+            throw new IllegalArgumentException("Invalid ticker");
+        }
     }
 
     private CloseableHttpClient getHttpClient(){
