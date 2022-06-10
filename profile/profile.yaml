@@ -20,6 +20,7 @@ skills:
     - RDBMS/SQL
     - Agile/Scrum
     - Git
+    - Jira
   # At least 5 skills
   competent:
     - Scala
@@ -93,7 +94,7 @@ professional_experience:
   - title: "Software Developer"
     company: "National Bank of Canada"
     duration: "February-May 2022"
-    description: "Developed software in an Agile environment for use within production. Used Amazon AWS, Terraform, Java, Maven, SQL, and Bash to develop projects. Collaborated with peers and seniors to resolve issues. Programs were tested using JUnit and then deployed to Jenkins."
+    description: "Developed software in an Agile environment for use within production. Ticket information managed through Jira. Used Amazon AWS, Terraform, Java, Maven, SQL, and Bash to develop projects. Collaborated with peers and seniors to resolve issues. Programs were tested using JUnit and then deployed to Jenkins."
   - title: "Software Developer"
     company: "Jarvis"
     duration: "2021-present"

@@ -4,7 +4,7 @@ My name is Brandon Angod. I graduated from Ontario Tech University with a major 
 
 ## Skills
 
-**Proficient:** Java, Python, C++, Linux/Bash, RDBMS/SQL, Agile/Scrum, Git
+**Proficient:** Java, Python, C++, Linux/Bash, RDBMS/SQL, Agile/Scrum, Git, Jira
 
 **Competent:** Scala, Terraform, Unity, OpenCV, Amazon AWS, Gradle, Maven, Dart, JUnit, Flutter
 
@@ -31,7 +31,7 @@ Project source code: [https://github.com/jarviscanada/jarvis_data_eng_BrandonAng
 
 ## Professional Experiences
 
-**Software Developer, National Bank of Canada (February-May 2022)**: Developed software in an Agile environment for use within production. Used Amazon AWS, Terraform, Java, Maven, SQL, and Bash to develop projects. Collaborated with peers and seniors to resolve issues. Programs were tested using JUnit and then deployed to Jenkins.
+**Software Developer, National Bank of Canada (February-May 2022)**: Developed software in an Agile environment for use within production. Ticket information managed through Jira. Used Amazon AWS, Terraform, Java, Maven, SQL, and Bash to develop projects. Collaborated with peers and seniors to resolve issues. Programs were tested using JUnit and then deployed to Jenkins.
 
 **Software Developer, Jarvis (2021-present)**: Collaborated with peers in an Agile/Scrum environment. Utilized Java and Bash to program various applications. PostgreSQL was used to store various information in the database. Docker was used to deploy all applications with the source code being available on Github following GitFlow practices. 
 
