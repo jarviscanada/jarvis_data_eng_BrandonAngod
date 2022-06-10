@@ -49,6 +49,12 @@
   ],
   "professional_experience": [
     {
+      "company": "National Bank of Canada",
+      "description": "Developed software in a Agile enviroment to be used within production. Used Amazon AWS, Terraform, Java, Maven, SQL, and Bash to develop the projects. Collaborated with peers and seniors to resolve issues. Programs tested using JUnit and then deployed to Jenkins.",
+      "duration": "February-May 2022",
+      "title": "Software Developer"
+    },
+    {
       "company": "Jarvis",
       "description": "Collaborated with peers in an Agile/Scrum environment. Utilized Java and Bash to program various applications. PostgreSQL was used to store various information in the database. Docker was used to deploy all applications with the source code being available on Github following GitFlow practices. ",
       "duration": "2021-present",
@@ -70,8 +76,10 @@
   "skills": {
     "competent": [
       "Scala",
+      "Terraform",
       "Unity",
       "OpenCV",
+      "Amazon AWS",
       "Gradle",
       "Maven",
       "Dart",
@@ -79,10 +87,10 @@
       "Flutter"
     ],
     "familiar": [
+      "Jenkins",
       "Tensorflow",
       "Clojure",
       "Assembly Language",
-      "Unreal Engine 4",
       "OpenGL"
     ],
     "proficient": [
