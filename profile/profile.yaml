@@ -23,8 +23,10 @@ skills:
   # At least 5 skills
   competent:
     - Scala
+    - Terraform
     - Unity
     - OpenCV
+    - Amazon AWS
     - Gradle
     - Maven
     - Dart
@@ -32,10 +34,10 @@ skills:
     - Flutter
   # At least 5 skills
   familiar:
+    - Jenkins
     - Tensorflow
     - Clojure
     - Assembly Language
-    - Unreal Engine 4
     - OpenGL
 
 # List of Jarvis projects
@@ -88,6 +90,10 @@ highlighted_projects:
 #The description must be more than 25 words. If your experience is not software related, please focus on soft skills and achievements (e.g. team collaboration, problem-solving, improvements, communication).
 professional_experience:
   #Write your Jarvis role as a professional experience rather than training.
+  - title: "Software Developer"
+    company: "National Bank of Canada"
+    duration: "February-May 2022"
+    description: "Developed software in a Agile enviroment to be used within production. Used Amazon AWS, Terraform, Java, Maven, SQL, and Bash to develop the projects. Collaborated with peers and seniors to resolve issues. Programs tested using JUnit and then deployed to Jenkins."
   - title: "Software Developer"
     company: "Jarvis"
     duration: "2021-present"
