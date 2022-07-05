@@ -2,7 +2,6 @@ package ca.jrvs.apps.trading.DAO;
 
 import ca.jrvs.apps.trading.model.config.MarketDataConfig;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.google.gson.Gson;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.conn.HttpClientConnectionManager;

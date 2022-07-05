@@ -74,8 +74,8 @@ public class IexQuote {
         this.volume = volume;
     }
 
-    public Double getUpdated() {
-        return updated;
+    public Long getUpdated() {
+        return this.updated;
     }
 
     public void setUpdated(Long updated) {
