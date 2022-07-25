@@ -11,63 +11,37 @@
   "github_repo_root_url": "https://github.com/jarviscanada/jarvis_data_eng_BrandonAngod",
   "highlighted_projects": [
     {
-      "description": "Using Unity and various loyalty free assets created a simple fighting game. Linked Animations together, scripted the entire game, and setup sound effects.",
+      "description": "Using Unity and various loyalty-free assets I created a simple fighting game. The Fighting game allows the player to face off against an AI. The player can move around freely, punch, kick, and block. There is also functionality for combos. As the player hits the opponent they will gain a special meter that they can spend to use hard-hitting attacks. Using Unity I attached animations to each action and adjusted their timing accordingly. If a character were to do a combo, the actions speed would increase slightly to adjust with the Hit Stun of the opponent. ",
       "git_url": "https://github.com/Kelldav/FinalProj",
       "name": "Basic Fighting Game"
     },
     {
-      "description": "Used Machine learning technology to create a program that can solve CAPTCHA test if the questions are all handwritten numbers. Afterwards Computer vision technology was used in order to test accuracy changes. To do such various filters were applied to see if they would help the program recognize it or if it made the result more obscure.",
+      "description": "Using Python's Tensorflow library, the application can solve CAPTCHA tests of handwritten numbers or pictures of clothing. To retrieve testing and training data, we used Keras' databases. Then we used MNIST Classification to train and test accuracy. Using these libraries, we compare the accuracy after applying gaussian filters. The idea of this project was to figure out the difference that the image quality would make with accuracy. Overall the filters decreased the accuracy for most of the results by 10%. However, flip-flops and numbers were exceptions. After applying a gaussian blur effect the image for flip-flops and numbers remained just as accurate as before and experienced no change.",
       "git_url": null,
       "name": "CAPTCHA Test Solver"
     }
   ],
   "jarvis_projects": [
     {
-      "description": "Monitors activity on different clusters and records information to an sql table to allow the user to monitor usage over time and manipulate the data.",
+      "description": "Using Bash Scripts, PostgreSQL, and Crontab, this project will take snapshots of the cluster's resource usage. The application will utilize grep to retrieve the different usage values and post them to a PostgreSQL database. The automation is done using Crontab to run a Bash script to post the information to PostgreSQL. This way the user can monitor the usage on each cluster and use SQL queries to monitor the cluster for any performance issues.",
       "git_url": "/linux_sql",
       "name": "Cluster Monitor"
     },
     {
       "description": [
-        "Twitter App: WIP",
-        "JDBC App: WIP",
-        "Grep App: WIP"
+        "Grep App: Searches a directory for specific patterns and outputs the occurrences within a specified text file. This application functions similar to Linux's Grep command and is written in Java 8. The user types in a file path to search and an output file to write to. After the command is run the output file will contain any occurrence of the specified pattern. ",
+        "JDBC App: Uses the JDBC driver to connect to a PSQL database using Java to perform basic CRUD operations. First, the application creates establishes the connection then in the JDBC executor class performs various operations to a pre-existing customer database. "
       ],
       "git_url": "/core_java",
       "name": "Core Java Apps"
-    },
-    {
-      "description": "",
-      "git_url": "/springboot",
-      "name": "Springboot App"
-    },
-    {
-      "description": "",
-      "git_url": "/python_data_anlytics",
-      "name": "Python Data Analytics"
-    },
-    {
-      "description": "",
-      "git_url": "/hadoop",
-      "name": "Hadoop"
-    },
-    {
-      "description": "",
-      "git_url": "/spark",
-      "name": "Spark"
-    },
-    {
-      "description": "",
-      "git_url": "/cloud_devops",
-      "name": "Cloud/DevOps"
     }
   ],
   "name": "Brandon Angod",
   "others": [
     {
       "bullets": [
-        "Competitive Gaming",
-        "Building Keyboards and Minatures",
+        "Competitive Gaming placed top 3 in two tournamnets",
+        "Building Keyboards and Miniatures",
         "Collecting vinyls"
       ],
       "title": "Activities/Hobbies"
@@ -75,31 +49,48 @@
   ],
   "professional_experience": [
     {
+      "company": "National Bank of Canada",
+      "description": "Developed software in an Agile environment for use within production. Ticket information managed through Jira. Used Amazon AWS, Terraform, Java, Maven, SQL, and Bash to develop projects. Collaborated with peers and seniors to resolve issues. Programs were tested using JUnit and then deployed to Jenkins.",
+      "duration": "February-May 2022",
+      "title": "Software Developer"
+    },
+    {
       "company": "Jarvis",
-      "description": "Created various scripts and learned new technology within Linux.",
+      "description": "Collaborated with peers in an Agile/Scrum environment. Utilized Java and Bash to program various applications. PostgreSQL was used to store various information in the database. Docker was used to deploy all applications with the source code being available on Github following GitFlow practices. ",
       "duration": "2021-present",
       "title": "Software Developer"
     },
     {
       "company": "Du-Finch Services",
-      "description": "Communicate with customers and help resolve their issues.",
+      "description": "Communicated with customers to aid them with their needs. Communicated with co-workers to properly document work performed and relayed the information clearly to inform them of the charges and estimated time remaining. Documented monthly expenses into the general ledger and created accounting reports for the accountant to monitor and make corrections as needed. ",
       "duration": "2016-2021",
       "title": "Secretary"
+    },
+    {
+      "company": "Collegiate Esports Association",
+      "description": "Organized scheduling of public live streams and ensured that there would be a production team ready to broadcast tournament matches. Communicated with players to locate matches for different time availabilities to maximize the number of streams. Monitored each match to ensure that each broadcast is going according to plan and no technical difficulties occurred. If a technical difficulty does occur then would coordinate with staff to resolve the issue as soon as possible.",
+      "duration": "2020-2021",
+      "title": "Scheduling Admin"
     }
   ],
   "skills": {
     "competent": [
       "Scala",
+      "Terraform",
       "Unity",
       "OpenCV",
+      "Amazon AWS",
+      "Gradle",
+      "Maven",
       "Dart",
+      "JUnit",
       "Flutter"
     ],
     "familiar": [
+      "Jenkins",
       "Tensorflow",
       "Clojure",
       "Assembly Language",
-      "Unreal Engine 4",
       "OpenGL"
     ],
     "proficient": [
@@ -109,8 +100,9 @@
       "Linux/Bash",
       "RDBMS/SQL",
       "Agile/Scrum",
-      "Git"
+      "Git",
+      "Jira"
     ]
   },
-  "summary": "My name is Brandon Angod. I graduated from Ontario Tech University with a major in Computer Science. Currently I am a Software Developer for Jarvis Consulting Group.The software industry excites me the most with how it has grown over the years and learn as much information within the industry as I can."
+  "summary": "My name is Brandon Angod. I graduated from Ontario Tech University with a major in Computer Science. Throughout my time in university, I got the opportunity to learn various programming languages and implement them in multiple projects. Every year introduced new challenges to overcome and caused me to discover new methods and algorithms to solve each challenge. Currently, I am a Software Developer for Jarvis Consulting Group. At Jarvis, I can take all the lessons I learned at university and improve on them. The software industry excites me the most with its innovations. Each innovation makes me want to challenge myself further and see how high I can reach within the industry. In the future, I aim to work on massive projects that will motivate others to improve themselves. I hope they will be able to improve my design and functionality. That way I challenge myself further to improve myself to make my project even better than their iteration. In the end, competition breeds innovation and I want to see how high we can take the software industry."
 }
