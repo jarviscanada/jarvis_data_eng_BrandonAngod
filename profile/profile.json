@@ -49,6 +49,12 @@
   ],
   "professional_experience": [
     {
+      "company": "National Bank of Canada",
+      "description": "Developed software in an Agile environment for use within production. Ticket information managed through Jira. Used Amazon AWS, Terraform, Java, Maven, SQL, and Bash to develop projects. Collaborated with peers and seniors to resolve issues. Programs were tested using JUnit and then deployed to Jenkins.",
+      "duration": "February-May 2022",
+      "title": "Software Developer"
+    },
+    {
       "company": "Jarvis",
       "description": "Collaborated with peers in an Agile/Scrum environment. Utilized Java and Bash to program various applications. PostgreSQL was used to store various information in the database. Docker was used to deploy all applications with the source code being available on Github following GitFlow practices. ",
       "duration": "2021-present",
@@ -70,8 +76,10 @@
   "skills": {
     "competent": [
       "Scala",
+      "Terraform",
       "Unity",
       "OpenCV",
+      "Amazon AWS",
       "Gradle",
       "Maven",
       "Dart",
@@ -79,10 +87,10 @@
       "Flutter"
     ],
     "familiar": [
+      "Jenkins",
       "Tensorflow",
       "Clojure",
       "Assembly Language",
-      "Unreal Engine 4",
       "OpenGL"
     ],
     "proficient": [
@@ -92,7 +100,8 @@
       "Linux/Bash",
       "RDBMS/SQL",
       "Agile/Scrum",
-      "Git"
+      "Git",
+      "Jira"
     ]
   },
   "summary": "My name is Brandon Angod. I graduated from Ontario Tech University with a major in Computer Science. Throughout my time in university, I got the opportunity to learn various programming languages and implement them in multiple projects. Every year introduced new challenges to overcome and caused me to discover new methods and algorithms to solve each challenge. Currently, I am a Software Developer for Jarvis Consulting Group. At Jarvis, I can take all the lessons I learned at university and improve on them. The software industry excites me the most with its innovations. Each innovation makes me want to challenge myself further and see how high I can reach within the industry. In the future, I aim to work on massive projects that will motivate others to improve themselves. I hope they will be able to improve my design and functionality. That way I challenge myself further to improve myself to make my project even better than their iteration. In the end, competition breeds innovation and I want to see how high we can take the software industry."
