@@ -1,14 +1,12 @@
 # Brandon Angod . Jarvis Consulting
 
-My name is Brandon Angod. I graduated from Ontario Tech University with a major in Computer Science. Throughout my time in university, I got the opportunity to learn various programming languages and implement them in multiple projects. Every year introduced new challenges to overcome and caused me to discover new methods and algorithms to solve each challenge. Currently, I am a Software Developer for Jarvis Consulting Group. At Jarvis, I can take all the lessons I learned at university and improve on them. The software industry excites me the most with its innovations. Each innovation makes me want to challenge myself further and see how high I can reach within the industry. In the future, I aim to work on massive projects that will motivate others to improve themselves. I hope they will be able to improve my design and functionality. That way I challenge myself further to improve myself to make my project even better than their iteration. In the end, competition breeds innovation and I want to see how high we can take the software industry.
+My name is Brandon Angod. I graduated from Ontario Tech University with a major in Computer Science. Throughout my time at university, I got the opportunity to learn various programming languages and implement them in multiple projects. Every year introduced new challenges to overcome and caused me to discover new methods and algorithms to solve each challenge. Currently, I work for Jarvis. Within Jarvis, I was able to get the opportunity to learn and grow in various fields. Previously was working a job as doing Software Developer. I enjoyed my time working as a Software developer role however it made me to want to experience different roles within the field. I've been interested in Business System Analyst work. I've always been good with understanding the business concepts and learned a lot throughout life about thinking of things with the business mindset and I know the role will be a perfect fit for me.
 
 ## Skills
 
-**Proficient:** Java, Python, C++, Linux/Bash, RDBMS/SQL, Agile/Scrum, Git, Jira
+**Business Skills:** Communication, Analysis, Excel, Visio, Problem Solving
 
-**Competent:** Scala, Terraform, Unity, OpenCV, Amazon AWS, Gradle, Maven, Dart, JUnit, Flutter
-
-**Familiar:** Jenkins, Tensorflow, Clojure, Assembly Language, OpenGL
+**Technical Skills:** RDBMS/SQL, Data Modeling/Mapping, Data Analytics, Bash, Java, Python, AWS, Junit, C++
 
 ## Jarvis Projects
 
@@ -31,7 +29,7 @@ Project source code: [https://github.com/jarviscanada/jarvis_data_eng_BrandonAng
 
 ## Professional Experiences
 
-**Software Developer, National Bank of Canada (February-May 2022)**: Developed software in an Agile environment for use within production. Ticket information managed through Jira. Used Amazon AWS, Terraform, Java, Maven, SQL, and Bash to develop projects. Collaborated with peers and seniors to resolve issues. Programs were tested using JUnit and then deployed to Jenkins.
+**Software Developer, National Bank of Canada (Feb 2022-May 2022)**: Developed software in an Agile environment for use within production. Communicated with seniors about current issues and problems at hand to work with them to resolve issues. Ticket information managed and documented through Jira. Used Amazon AWS, Terraform, Java, Maven, SQL, and Bash to develop projects.  Programs were tested using JUnit and then deployed to Jenkins.
 
 **Software Developer, Jarvis (2021-present)**: Collaborated with peers in an Agile/Scrum environment. Utilized Java and Bash to program various applications. PostgreSQL was used to store various information in the database. Docker was used to deploy all applications with the source code being available on Github following GitFlow practices. 
 
@@ -45,6 +43,6 @@ Project source code: [https://github.com/jarviscanada/jarvis_data_eng_BrandonAng
 
 
 ## Miscellaneous
-- Competitive Gaming
+- Competitive Gaming, Competed in competitive Rainbow 6 Siege and came top 3 in two tournaments.
 - Building Keyboards and Miniatures
 - Collecting vinyls
